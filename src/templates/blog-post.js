@@ -26,6 +26,8 @@ class BlogPostTemplate extends React.Component {
           title={post.title}
           content={post.description?.childMarkdownRemark?.excerpt}
         />
+
+        
         <div className={styles.container}>
      
           <div className={styles.article}>
@@ -34,10 +36,26 @@ class BlogPostTemplate extends React.Component {
             <time dateTime={post.rawDate}>{post.publishDate}</time> –{' '}
             {post.body?.childMarkdownRemark?.timeToRead} minute read
           </span>
-              
-                <GatsbyImage className={styles.image} alt={post.title}  image={post.heroImage?.gatsbyImageData} />
-              
-
+          {(previous || next) && (
+              <nav>
+                <ul className={styles.articleNavigation}>
+                  {previous && (
+                    <li>
+                      <Link to={`/blog/${previous.slug}`} rel="prev">
+                        ← {previous.title}
+                      </Link>
+                    </li>
+                  )}
+                  {next && (
+                    <li>
+                      <Link to={`/blog/${next.slug}`} rel="next">
+                        {next.title} →
+                      </Link>
+                    </li>
+                  )}
+                </ul>
+              </nav>
+            )}
             <div
               className={styles.body}
               dangerouslySetInnerHTML={{
