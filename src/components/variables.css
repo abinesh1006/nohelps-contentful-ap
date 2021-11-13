@@ -23,6 +23,8 @@
   --space-xl: 20px;
   --space-2xl: 24px;
   --space-3xl: 48px;
+  --space-4x1: 72px;
+  --space-5x1: 96px;
 
   /* line-height */
   --solid: 1;
@@ -54,6 +56,13 @@
   /* colors */
   --primary: #4a90e2;
   --background: var(--white);
+
+
+  --primary-hover: #fc1010;
+  --background-inverse: var(--white);
+
+
+
   --border: var(--black-fade-5);
 
   /* text */
@@ -68,6 +77,7 @@
 
   /* size */
   --size-gutter: var(--space-2xl);
+  --size-logo-width: var(--space-5xl);
   --size-logo: var(--space-2xl);
   --size-max-width: 80rem;
 }

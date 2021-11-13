@@ -37,7 +37,6 @@ body {
 }
 
 img {
-  display: block;
   width: 100%;
 }
 
@@ -52,16 +51,17 @@ h6 {
 }
 
 a {
-  color: currentColor;
+  color: black !important;
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--primary);
+  color: var(--primary-hover) !important;
 }
 
 a.active {
   font-weight: var(--bold);
+  color: var(--primary-hover) !important;
 }
 
 tt,

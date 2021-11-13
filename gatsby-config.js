@@ -43,12 +43,20 @@ module.exports = {
   plugins: [
     "gatsby-transformer-remark",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-sass",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",
     "gatsby-plugin-image",
     {
       resolve: "gatsby-source-contentful",
       options: contentfulConfig,
+    },
+    {
+      resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
+      options: {
+        develop: true, // Activates purging in npm run develop
+        purgeOnly: ['/all.sass'], // applies purging only on the bulma css file
+      },
     },
   ],
 };

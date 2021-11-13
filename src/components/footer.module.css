@@ -6,12 +6,13 @@
   text-align: right;
 }
 
-.container a {
+.navitems {
   border-bottom: 1.5px solid transparent;
   font-weight: var(--medium);
 }
 
-.container a:hover {
-  border-bottom-color: var(--primary);
-  color: var(--primary);
+.navitems:hover {
+  color: var(--white) !important;
+  background-color: var(--primary-hover) !important;
+  background: var(--primary-hover) !important;
 }

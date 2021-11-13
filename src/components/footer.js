@@ -1,16 +1,106 @@
 import React from 'react'
-
-import Container from './container'
+import { Link } from 'gatsby'
+import facebook from '../img/social/facebook.svg'
+import instagram from '../img/social/instagram.svg'
+import twitter from '../img/social/twitter.svg'
+import vimeo from '../img/social/vimeo.svg'
 import * as styles from './footer.module.css'
-
-const Footer = () => (
-  <Container as="footer">
-    <div className={styles.container}>
-      Built with <a href="https://contentful.com/">Contentful</a> and{' '}
-      <a href="https://gatsbyjs.com">Gatsby</a> &middot;{' '}
-      <a href="https://github.com/contentful/starter-gatsby-blog">Source</a>
-    </div>
-  </Container>
-)
+const Footer = class extends React.Component {
+  render() {
+    return (
+    
+      <footer className="footer has-background-white has-text-black-ter">
+        {/* <div className="content has-text-centered">
+          <img
+            src={logo}
+            alt="Kaldi"
+            style={{ width: '14em', height: '10em' }}
+          />
+        </div> */}
+        <div className="content has-text-centered has-background-white has-text-black-ter">
+          <div className="has-background-white has-text-black-ter">
+            <div style={{ maxWidth: '80vw', margin: '0 auto' }} className="columns">
+              <div className="column is-4">
+                <section className="menu">
+                  <ul className="menu-list">
+                    <li>
+                      <Link to="/" className={styles.navitems}>
+                        Home
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className={styles.navitems} to="/about">
+                        About
+                      </Link>
+                    </li>
+                    <li>
+                      <a
+                        className="navbar-item"
+                        href="/admin/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Admin
+                      </a>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+              <div className="column is-4">
+                <section>
+                  <ul className="menu-list">
+                    <li>
+                      <Link className={styles.navitems} to="/blog">
+                        Latest Stories
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className={styles.navitems} to="/contact">
+                        Contact
+                      </Link>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+              <div className="column is-4 social">
+                <a title="facebook" target="_blank" rel="noreferrer" href="https://facebook.com">
+                  <img
+                    src={facebook}
+                    alt="Facebook"
+                    style={{ width: '1em', height: '1em' }}
+                  />
+                </a>
+                <a title="twitter" target="_blank" rel="noreferrer" href="https://twitter.com">
+                  <img
+                    className="fas fa-lg"
+                    src={twitter}
+                    alt="Twitter"
+                    style={{ width: '1em', height: '1em' }}
+                  />
+                </a>
+                <a title="instagram" target="_blank" rel="noreferrer" href="https://instagram.com">
+                  <img
+                    src={instagram}
+                    alt="Instagram"
+                    style={{ width: '1em', height: '1em' }}
+                  />
+                </a>
+                <a title="vimeo" target="_blank" rel="noreferrer" href="https://vimeo.com">
+                  <img
+                    src={vimeo}
+                    alt="Vimeo"
+                    style={{ width: '1em', height: '1em' }}
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <p style={{paddingBottom:'1em', color:'#7c7c7c'}}>Copyright © nohelps.com | 2021</p>
+        </div>
+      </footer>
+    )
+  }
+}
 
 export default Footer
+
