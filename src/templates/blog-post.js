@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 import Seo from '../components/seo'
 import Layout from '../components/layout'
@@ -22,17 +23,21 @@ class BlogPostTemplate extends React.Component {
           image={`http:${post.heroImage.resize.src}`}
         />
         <Hero
-          image={post.heroImage?.gatsbyImageData}
           title={post.title}
           content={post.description?.childMarkdownRemark?.excerpt}
         />
         <div className={styles.container}>
+     
+          <div className={styles.article}>
           <span className={styles.meta}>
             {post.author?.name} &middot;{' '}
             <time dateTime={post.rawDate}>{post.publishDate}</time> –{' '}
             {post.body?.childMarkdownRemark?.timeToRead} minute read
           </span>
-          <div className={styles.article}>
+              
+                <GatsbyImage className={styles.image} alt={post.title}  image={post.heroImage?.gatsbyImageData} />
+              
+
             <div
               className={styles.body}
               dangerouslySetInnerHTML={{

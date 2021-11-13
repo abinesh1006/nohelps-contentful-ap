@@ -4,8 +4,6 @@
   font-style: italic;
   margin: 0 auto 1em;
   max-width: var(--size-max-width);
-  padding-bottom: var(--size-gutter);
-  padding-left: var(--size-gutter);
   position: relative;
   top: -1em;
 }
@@ -69,7 +67,15 @@
   list-style: none;
   padding: 0;
 }
-
+.image {
+  /*
+    Ensure golden ratio for the hero size while limiting it to some extend to
+    the viewport width
+  */
+  height: 61.8vh;
+  max-height: 560px;
+  width: 100%;
+}
 @media (min-width: 768px) {
   .container {
     max-width: var(--size-max-width);
