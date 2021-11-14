@@ -1,13 +1,13 @@
 {
-  "name": "Contentful Gatsby Starter",
-  "description": "Gatsby starter for a Contentful project.",
+  "name": "Nohelps",
+  "description": "Nohelps Personal Blogger everything trust yourself",
   "keywords": [
-    "contentful",
-    "gatsby",
+    "blog",
     "static",
-    "ssg"
+    "personal",
+    "nohelps"
   ],
-  "repository": "https://github.com/contentful-userland/gatsby-contentful-starter",
+  "repository": "https://github.com/abinesh1006/nohelps-contentful-ap",
   "success_url": "/",
   "buildpacks": [
     {
