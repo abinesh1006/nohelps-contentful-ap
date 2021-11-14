@@ -52,6 +52,12 @@ module.exports = {
       options: contentfulConfig,
     },
     {
+      resolve: `gatsby-plugin-google-adsense`,
+      options: {
+        publisherId: `ca-pub-9830655811026165`
+      },
+    },
+    {
       resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
       options: {
         develop: true, // Activates purging in npm run develop

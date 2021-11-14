@@ -95,7 +95,7 @@ const Footer = class extends React.Component {
               </div>
             </div>
           </div>
-          <p style={{paddingBottom:'1em', color:'#7c7c7c'}}>Copyright © nohelps.com | 2021</p>
+          <p style={{paddingBottom:'1em', color:'#00000'}}>Copyright © nohelps.com | 2021</p>
         </div>
       </footer>
     )
