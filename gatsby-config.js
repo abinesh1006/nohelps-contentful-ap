@@ -27,24 +27,8 @@ module.exports = {
     title: "Nohelps",
     description: "Personal Blogger",
   },
-  pathPrefix: "/gatsby-contentful-starter",
+  pathPrefix: "/nohelps",
   plugins: [
-    {
-      resolve: "gatsby-remark-embed-video",
-      options: {
-          width: 800,
-          ratio: 1.77, 
-          height: 400, 
-          related: false,
-          noIframeBorder: true
-      },
-   },
-   {
-    resolve: `gatsby-remark-responsive-iframe`,
-    options: {
-      wrapperStyle: `margin-bottom: 1.0725rem`,
-    },
-  },
     "gatsby-transformer-remark",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sass",
