@@ -1,0 +1,23 @@
+- profile:
+  initials: NH
+  name: No Helps
+  profession: Online A-Z Studio
+  image: images/profile.jpg
+  location: Chennai, India
+  relocation: true
+  company: No Helps
+  for_hire: true
+  focus: Novels And Question Banks
+  focus_url: https://noheps.com
+  about: |
+    Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution.
+
+    User generated content in real-time will have multiple touchpoints for offshoring. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.
+  skills:
+    - Blogs & Novels
+    - Mock Question Banks
+    - Product Review
+  tools:
+    - Amazon
+    - ContentFul
+    - netlify

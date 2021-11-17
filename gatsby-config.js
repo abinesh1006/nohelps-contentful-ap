@@ -25,10 +25,24 @@ if (!spaceId || !accessToken) {
 module.exports = {
   siteMetadata: {
     title: "Nohelps",
+    locale: "en",
     description: "Personal Blogger",
-  },
+    showThemeLogo:false,
+},
   pathPrefix: "/nohelps",
   plugins: [
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [
+          require("tailwindcss")(require("./tailwind.config")("bright-red")),
+          require("postcss-input-range"),
+          require("autoprefixer"),
+        ],
+      },
+    },
+    `gatsby-transformer-yaml`,
+    `gatsby-plugin-react-svg`,
     "gatsby-transformer-remark",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sass",
@@ -38,6 +52,12 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: contentfulConfig,
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: "content/",
+      },
     },
     {
       resolve: `gatsby-plugin-offline`,
