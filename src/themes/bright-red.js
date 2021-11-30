@@ -6,6 +6,5 @@ module.exports = {
   'line': '#dedede',
   'skill-1': '#9079db',
   'skill-2': '#e58b5f',
-  'skill-3': '#3ba1db',
-  'skill-4': '#e58b5f',
+  'skill-3': '#3ba1db'
 };

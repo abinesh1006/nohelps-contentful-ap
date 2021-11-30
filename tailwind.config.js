@@ -11,7 +11,7 @@ module.exports = theme => {
         safelist: [/^text-skill/, /^border-skill/],
       },
     },
-    darkMode: 'class',
+    darkMode: false,
     theme: {
       fontFamily: {
         header: ["Source Sans Pro", "sans-serif"],
@@ -29,6 +29,9 @@ module.exports = theme => {
         },
         spacing: {
           "14": "3.5rem",
+        },
+        borderTopped:{
+          "red":"2px solid red"
         },
       },
     },

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
-import Seo from '../components/seo/seo'
+import Seo from '../components/seo'
 import Layout from '../components/layout'
 import Hero from '../components/hero'
 import Tags from '../components/tags'

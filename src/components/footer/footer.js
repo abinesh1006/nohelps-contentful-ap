@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from 'gatsby'
 import { StaticQuery, graphql } from "gatsby"
 import * as styles from './footer.module.css'
-import SocialLinks from "../social-links/social-links"
+import SocialLinks from "./social-links"
 export default function Footer() {
   return (
     <StaticQuery
@@ -18,9 +18,9 @@ export default function Footer() {
      
       render={data => (
         
-        <footer className="footer has-background-white has-text-black-ter">
-        <div className="content has-text-centered has-background-white has-text-black-ter">
-          <div className="has-background-white has-text-black-ter">
+        <footer className="footer">
+        <div className="content has-text-centered" style={{ "border-top": "2px solid red"}}>
+          <div className="">
             <div style={{ maxWidth: '80vw', margin: '0 auto' }} className="columns">
               <div className="column is-4">
                 <section className="menu">
@@ -69,7 +69,7 @@ export default function Footer() {
           
             </div>
           </div>
-          <p style={{paddingBottom:'1em', color:'#00000'}}>Copyright © nohelps.com | 2021</p>
+          <p className="bg-red-600 justify-center items-center text-white font-black transition-shadow duration-150">Copyright © nohelps.com | 2021</p>
         </div>
       </footer>
       )}
