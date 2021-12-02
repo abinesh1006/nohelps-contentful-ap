@@ -6,12 +6,15 @@ module.exports = theme => {
 
   return {
     purge: {
-      content: [`${__dirname}/src/**/*.js`, `./src/**/*.js`],
+      content: [`${__dirname}/src/**/*.js`, `./src/**/*.jsx`],
       options: {
         safelist: [/^text-skill/, /^border-skill/],
       },
     },
     darkMode: false,
+    variants: {
+      opacity: ({ after }) => after(['disabled'])
+    },
     theme: {
       fontFamily: {
         header: ["Source Sans Pro", "sans-serif"],
