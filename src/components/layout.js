@@ -4,7 +4,7 @@ import './variables.css'
 import './global.css'
 import './all.scss'
 import Seo from './seo'
-import Navigation from './navigation'
+import Navigation from './header/navigation'
 import Footer from './footer/footer'
 
 class Template extends React.Component {

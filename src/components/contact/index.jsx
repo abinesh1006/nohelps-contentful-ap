@@ -128,7 +128,8 @@ export default withFormik({
     lname: "",
     email: "",
     message: "",
-    success: false
+    success: false,
+    isSubmitting : true,
   }),
   validationSchema: () =>
     Yup.object().shape({

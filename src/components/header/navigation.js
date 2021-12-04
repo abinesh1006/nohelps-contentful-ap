@@ -21,15 +21,16 @@ const Navigation = () => (
         </Link>
       </li>
       <li className={styles.navigationItem}>
-        <Link to="/shop-pr/" activeClassName="active">
-          Products-test
+        <Link to="/contact/" activeClassName="active">
+          Contact
         </Link>
       </li>
       <li className={styles.navigationItem}>
-        <Link to="/contact/" activeClassName="active">
-          About
+        <Link to="/signup/" activeClassName="active">
+          Sign Up
         </Link>
       </li>
+      
     </ul>
   </nav>
 )

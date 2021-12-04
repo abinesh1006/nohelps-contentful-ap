@@ -2,7 +2,7 @@ import React from 'react'
 
 import * as styles from './hero.module.css'
 
-const Hero = ({ image, title, content }) => (
+const Hero = ({title, content }) => (
   
     <div className={styles.details}>
       <h1 className={styles.title}>{title}</h1>
