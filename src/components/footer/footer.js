@@ -52,8 +52,8 @@ export default function Footer() {
                 <section>
                   <ul className="menu-list">
                     <li>
-                      <Link className={styles.navitems} to="/blog">
-                        Latest Stories
+                      <Link className={styles.navitems} to="https://nohelps.atlassian.net/jira/software/projects/NOHELPS/boards/1">
+                        Carrers
                       </Link>
                     </li>
                     <li>
