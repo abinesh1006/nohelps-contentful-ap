@@ -133,12 +133,23 @@ export default withFormik({
   }),
   validationSchema: () =>
     Yup.object().shape({
-      fname: Yup.string().required("First name field is required"),
-      lname: Yup.string().required("Last name field is required"),
+      fname: Yup.string()
+                .required("First name field is required")
+                .max(15, 'First Name should not exceed 15 characters'),
+
+      lname: Yup.string()
+                 .required("Last name field is required")
+                 .max(15, 'Last Name should not exceed 15 characters'),
+
       email: Yup.string()
-        .email("Invalid email")
-        .required("Email field is required"),
-      message: Yup.string().required("Message field is required")
+                 .email("Please enter valid Email ID")
+                 .max(50, 'Email should not exceed 50 characters')
+                 .required("Email field is required"),
+
+      message: Yup.string()
+                  .required("Message field is required")
+                  .min(30, 'Please enter atleast 30 charcters')
+                  .max(150, 'Character limit should not exceed more than 150 characters')
     }),
   handleSubmit: async (
     { fname, lname ,email, message },

@@ -7,7 +7,7 @@ const Navigation = () => (
   <nav role="navigation" className={styles.container} aria-label="Main">
     <Link to="/" className={styles.logoLink}>
       <span ><img className={styles.logo} src={pic} alt="NoHelps"></img></span>
-      <span className={styles.navigationItem}>NoHelps</span>
+      <span className={`${styles.navigationItem} text-red-600 justify-center items-center italic font-bold transition-shadow duration-150`}>NOHELPS</span>
     </Link>
     <ul className={styles.navigation}>
       <li className={styles.navigationItem}>
@@ -16,7 +16,7 @@ const Navigation = () => (
         </Link>
       </li>
       <li className={styles.navigationItem}>
-        <Link to="/blog/" activeClassName="active">
+        <Link to="/blog/"  partiallyActive={true} activeClassName="active">
           Blog
         </Link>
       </li>

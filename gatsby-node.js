@@ -3,11 +3,11 @@ const path = require('path')
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
-  const contact = path.resolve('./src/templates/contact.js')
-  actions.createPage({
-    path: "/contact",
-    component: contact
-  })
+  // const contact = path.resolve('./src/templates/contact.js')
+  // actions.createPage({
+  //   path: "/contact",
+  //   component: contact
+  // })
   // Define a template for blog post
   const blogPost = path.resolve('./src/templates/blog-post.js')
 
@@ -33,10 +33,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   const posts = result.data.allContentfulBlogPost.nodes
-
-  // Create blog posts pages
-  // But only if there's at least one blog post found in Contentful
-  // `context` is available in the template as a prop and as a variable in GraphQL
 
   if (posts.length > 0) {
     posts.forEach((post, index) => {

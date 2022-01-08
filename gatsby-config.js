@@ -26,6 +26,9 @@ module.exports = {
   siteMetadata: {
     title: "Nohelps",
     description: "Personal Blogger",
+    url: 'https://nohelps.com',
+    twitterHandle: '@swashata',
+
   },
   pathPrefix: "/nohelps",
   plugins: [
@@ -35,7 +38,10 @@ module.exports = {
       resolve: `gatsby-plugin-sass`,
       options: {
         // Configure SASS to process Tailwind
-        postCssPlugins: [require('tailwindcss')],
+        postCssPlugins: [
+          require('tailwindcss'),
+          require("./tailwind.config.js")
+        ],
       },
     },
     "gatsby-plugin-react-helmet",
@@ -68,7 +74,6 @@ module.exports = {
       resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
       options: {
         develop: true, // Activates purging in npm run develop
-        purgeOnly: ['/all.sass'], // applies purging only on the bulma css file
       },
     },
     {

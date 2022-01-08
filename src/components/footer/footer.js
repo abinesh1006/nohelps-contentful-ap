@@ -18,7 +18,7 @@ export default function Footer() {
      
       render={data => (
         
-        <footer className="footer">
+        <footer className="mt-8 bottom-0">
         <div className="content has-text-centered" style={{ "border-top": "2px solid red"}}>
           <div className="">
             <div style={{ maxWidth: '80vw', margin: '0 auto' }} className="columns">

@@ -1,19 +1,22 @@
 {
   "name": "NoHelps",
-  "description": "no helps personal nlogger",
+  "description": "no Helps - Blog,Books, product review, Suggestions,Top 10",
   "private": true,
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": "Abinesh S",
   "bugs": {
     "url": "https://github.com/abinesh1006/nohelps-contentful-ap"
   },
   "dependencies": {
+    "@fortawesome/react-fontawesome": "^0.1.16",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "bulma": "^0.9.3",
     "color": "^4.0.2",
+    "firebase": "^9.6.2",
     "formik": "^2.2.9",
     "gatsby": "^4.0.0",
+    "gatsby-plugin-firebase": "^0.2.0-beta.4",
     "gatsby-plugin-google-adsense": "^1.1.3",
     "gatsby-plugin-google-gtag": "^4.1.0",
     "gatsby-plugin-image": "^2.0.0",
@@ -26,6 +29,7 @@
     "gatsby-plugin-react-helmet": "^5.0.0",
     "gatsby-plugin-sass": "^5.2.0",
     "gatsby-plugin-sharp": "^4.0.0",
+    "gatsby-plugin-social9-socialshare": "^1.0.5",
     "gatsby-remark-embed-video": "^3.1.1",
     "gatsby-remark-responsive-iframe": "^5.1.0",
     "gatsby-source-contentful": "^6.0.0",

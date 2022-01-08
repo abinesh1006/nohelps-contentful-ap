@@ -6,14 +6,12 @@ import Layout from '../components/layout'
 import Hero from '../components/hero'
 import Tags from '../components/tags'
 import * as styles from './blog-post.module.css'
-import Shares from '../components/Shares/Shares';
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulBlogPost')
     const previous = get(this.props, 'data.previous')
     const next = get(this.props, 'data.next')
-    const url = "https://nohelps.com/"
 
     return (
       <Layout location={this.props.location}>
@@ -84,15 +82,6 @@ class BlogPostTemplate extends React.Component {
               </nav>
               
             )}
-            <Shares
-				      socialConfig={{
-					        config: {
-						        url: `${url}${post.slug}`,
-                    title: `${post.title}`
-					      },
-			    	}}
-				tags={post.tags}
-			/>
           </div>
         </div>
       </Layout>
